@@ -4,6 +4,7 @@ import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import '../App.css'
 
 
+
 export default class CharactersPage extends React.Component {
     
 render() {
@@ -11,8 +12,7 @@ render() {
         <div><header className="App-header">
       <div className="characterCards">
 <div> 
-<div className="flipCard">
-
+  {this.props.characters.map(character => <div className="flipCard">
 <Flippy 
 flipOnHover={false} 
 flipOnClick={true} 
@@ -23,16 +23,15 @@ style={{ width: '200px', height: '200px' }}
 <FrontSide style={{
   backgroundColor: '#403B3B',
 }}>
-Characters
+<div>{this.props.image}</div>
 </FrontSide>
-
 <BackSide
 style={{ backgroundColor: '#403B3B'}}>
 Information
 </BackSide>
-
 </Flippy>
 </div>
+)}
 </div>
     </div>
      </header></div>
