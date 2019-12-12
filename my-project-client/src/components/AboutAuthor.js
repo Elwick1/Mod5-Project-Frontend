@@ -7,10 +7,19 @@ export default class AboutAuthor extends React.Component {
         return(
             <div>
                 <header className="App-header">
-                    <div className="startBox">
+                    <div className="authBox">
                         <h1> About The Author </h1>
-                            <div className="begin">
-                                <h2> It'sA Me Michael!! </h2>
+                            <div className="authName">
+                                <h2> Michael Williamson </h2>
+                                <div className="Auth-Img">
+                                    <image src="">
+                                    </image>
+                                </div>
+                                <div>
+                                    <p>
+                                        Bio of me
+                                    </p>
+                                </div>
                             </div>
                     </div>
                 </header>
@@ -18,3 +27,4 @@ export default class AboutAuthor extends React.Component {
         )
     }
 }
+                                        
