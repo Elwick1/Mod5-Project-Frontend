@@ -68,6 +68,11 @@ li:hover {
   color:white;
 }
 
+.flipCard {
+  position: center;
+  
+}
+
 .startBox {
   position: center;
 width: 770px;

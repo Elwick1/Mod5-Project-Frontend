@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
-
+import Flippy, { FrontSide, BackSide } from 'react-flippy';
+import '../App.css'
 
 
 export default class CharactersPage extends React.Component {
@@ -10,12 +11,30 @@ render() {
         <div><header className="App-header">
       <div className="characterCards">
 <div> 
-        <h1> there should be character cards here </h1>
+<div className="flipCard">
+
+<Flippy 
+flipOnHover={false} 
+flipOnClick={true} 
+flipDirection="horizontal"
+ref={(r) => this.flippy = r} 
+style={{ width: '200px', height: '200px' }} 
+>
+<FrontSide style={{
+  backgroundColor: '#403B3B',
+}}>
+Characters
+</FrontSide>
+
+<BackSide
+style={{ backgroundColor: '#403B3B'}}>
+Information
+</BackSide>
+
+</Flippy>
 </div>
-
-
-      
-      </div>
+</div>
+    </div>
      </header></div>
     )
 }
