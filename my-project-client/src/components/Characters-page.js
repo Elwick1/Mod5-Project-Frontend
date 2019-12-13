@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
+import CharacterCard from '../components/CharacterCard'
 
 
 
@@ -10,7 +11,7 @@ render() {
         <div><header className="App-header">
       <div className="characterCards">
 <div> 
-        <h1> there should be character cards here </h1>
+{this.props.characters.map(character => <CharacterCard {...character}/>)}
 </div>
 
 

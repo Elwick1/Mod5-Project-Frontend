@@ -12,13 +12,30 @@ import CharactersPage from './components/Characters-page';
 import StoryInfo from './components/StoryInfo';
 import AboutAuthor from './components/AboutAuthor';
 
-function App() {
-  return (
+const API = 'http://localhost:3000/characters/'
+
+
+export default class App extends React.Component {
+
+  state = {
+    characters : []
+  }
+
+  componentDidMount() {
+    fetch(API)
+    .then(res => res.json())
+    .then(characters => this.setState({
+       characters : characters
+    }))
+  }
+
+  render () {
+    return (
     <div className="App">
       <Navbar/>
       <div>
       <Switch>
-      <Route path="/Characters" component={CharactersPage}>
+      <Route path="/Characters" render={(props) => <CharactersPage {...props} characters={this.state.characters}/>} >
       </Route>
       <Route path="/StoryInfo" component={StoryInfo}>
       </Route>
@@ -40,5 +57,4 @@ function App() {
     
   );
 }
-
-export default App;
+}

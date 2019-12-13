@@ -1,0 +1,56 @@
+{ "characters": [
+    {
+        "name": "Ravajani",
+        "race": "Beastman",
+        "class" :"Fighter",
+        "health": 17,
+        "magic": 0,
+        "id": 1,
+        "image": "https://i.pinimg.com/564x/f9/be/35/f9be351076c504b837871447dae067a4.jpg"
+    },
+    {
+        "name": "Illiana",
+        "race": "Human",
+        "class": "Fighter",
+        "health": 16,
+        "magic": 0,
+        "id": 2,
+        "image": "https://i.pinimg.com/564x/af/01/34/af0134bdad1414c3fe5452b337c6e526.jpg"
+    },
+    {
+        "name": "Obann",
+        "race": "Half-orc",
+        "class": "Rogue",
+        "health": 15,
+        "magic": 0,
+        "id": 3,
+        "image": "https://i.pinimg.com/564x/01/1f/88/011f88b096c80b59b4cb882a5b6bb92c.jpg"
+    },
+    {
+        "name": "Yashara",
+        "race": "Half-elf",
+        "class": "Rogue",
+        "health": 15,
+        "magic": 0,
+        "id": 4,
+        "image": "https://i.pinimg.com/564x/88/6f/c8/886fc873614c5f38853823896848c335.jpg"
+    },
+    {
+        "name": "Halas",
+        "race": "Human",
+        "class": "Mage",
+        "health": 11,
+        "magic": 15,
+        "id": 5,
+        "image": "https://i.pinimg.com/564x/a9/be/e6/a9bee69cd6f5c311cc5859f2ad157d5d.jpg"
+    },
+    {
+        "name": "Derrin",
+        "race": "Dark-elf",
+        "class": "Mage",
+        "health": 12,
+        "magic": 16,
+        "id": 6,
+        "image": "https://i.pinimg.com/564x/51/cb/b2/51cbb202d922a764745d2c683c6ac8b3.jpg"
+    }
+]}
