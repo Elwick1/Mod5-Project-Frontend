@@ -8,11 +8,9 @@ render() {
         <div><header className="App-header">
       <div className="storyBox">
       <h1> Story Info </h1>
-      <div className="begin">
         <p>
           story info will go here 
         </p>
-      </div>
       </div>
      </header></div>
     )

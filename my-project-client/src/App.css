@@ -68,6 +68,19 @@ li:hover {
   color:white;
 }
 
+.charImg {
+  position: center;
+  border-radius:10px;
+  top: 5px;
+  width:150px;
+  height:190px;
+  left: 15px;
+  grid-gap: 20px;
+  padding-inline-start: 0;
+  padding: 10px;
+    display: table;
+}
+
 .startBox {
   position: center;
 width: 770px;
@@ -95,9 +108,35 @@ background: rgba(7, 7, 7, 0.5);
   background: rgba(7, 7, 7, 0.5);
 }
 
-/* .begin {
+.begin {
+  font-family: Sofia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 38px;
+  
+  color: rgb(250, 2, 2);
+}
 
-} */
+.creepySpeech {
+  font-family: Sofia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 38px;
+  
+  color: rgb(250, 2, 2);
+}
+
+.adventureBox {
+  position: absolute;
+  padding-bottom: initial;
+  width: 1200px;
+  height: 580px;
+  left: 40px;
+  top: 110px;
+  background: rgba(7, 7, 7, 0.5);
+}
 
 .message {
   font-family: Sofia;
@@ -118,7 +157,20 @@ font-size: 24px;
 line-height: 38px;
 }
 
-
+.cardFlip {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-gap: 20px;
+  padding-inline-start: 0;
+  float: left;
+    width: 50%;
+    padding: 10px;
+    display: table;
+    clear: both;
+    list-style: none;
+    padding: 20px;
+    display: grid;
+}
 
 .App-header {
   background-color: #282c34;

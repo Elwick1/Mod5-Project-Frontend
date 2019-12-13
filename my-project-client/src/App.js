@@ -11,6 +11,7 @@ import {
 import CharactersPage from './components/Characters-page';
 import StoryInfo from './components/StoryInfo';
 import AboutAuthor from './components/AboutAuthor';
+import Adventure from './components/Adventure';
 
 const API = 'http://localhost:3000/characters/'
 
@@ -18,7 +19,8 @@ const API = 'http://localhost:3000/characters/'
 export default class App extends React.Component {
 
   state = {
-    characters : []
+    characters : [],
+    showMore : false
   }
 
   componentDidMount() {
@@ -41,12 +43,21 @@ export default class App extends React.Component {
       </Route>
       <Route path="/Author" component={AboutAuthor}>
       </Route>
+      <Route path="/Adventure" component={Adventure}>
+      </Route>
       <Route exact path="/" component={() =>
         <header className="App-header">
           <div className="startBox">
-            <h1> Hello Michael! </h1>
+            <div className="creepySpeech">
+            <h1> Welcome Stranger.. </h1>
+            <h3> How would you like to hear a tale? </h3>
+            <h4> I have many, filled with Wonder beyond your imagination.. </h4>
+            <h4> Terror beyond your wildest nightmares..</h4>
+            </div>
           <div className="begin">
-        <button>Tell Me A Story</button>
+          <Link key={"Adventure"} to={"/Adventure"}>
+        <button>Tell Me More...</button>
+        </Link>
           </div>
           </div>
         </header>}>
