@@ -1,8 +1,8 @@
 { "characters": [
     {
         "name": "Ravajani",
-        "race": "beastman",
-        "class" :"fighter",
+        "race": "Beastman",
+        "class" :"Fighter",
         "health": 17,
         "magic": 0,
         "id": 1,
@@ -10,8 +10,8 @@
     },
     {
         "name": "Illiana",
-        "race": "human",
-        "class": "fighter",
+        "race": "Human",
+        "class": "Fighter",
         "health": 16,
         "magic": 0,
         "id": 2,
@@ -19,8 +19,8 @@
     },
     {
         "name": "Obann",
-        "race": "half-orc",
-        "class": "rogue",
+        "race": "Half-orc",
+        "class": "Rogue",
         "health": 15,
         "magic": 0,
         "id": 3,
@@ -28,8 +28,8 @@
     },
     {
         "name": "Yashara",
-        "race": "half-elf",
-        "class": "rogue",
+        "race": "Half-elf",
+        "class": "Rogue",
         "health": 15,
         "magic": 0,
         "id": 4,
@@ -37,8 +37,8 @@
     },
     {
         "name": "Halas",
-        "race": "human",
-        "class": "mage",
+        "race": "Human",
+        "class": "Mage",
         "health": 11,
         "magic": 15,
         "id": 5,
@@ -46,8 +46,8 @@
     },
     {
         "name": "Derrin",
-        "race": "dark-elf",
-        "class": "mage",
+        "race": "Dark-elf",
+        "class": "Mage",
         "health": 12,
         "magic": 16,
         "id": 6,

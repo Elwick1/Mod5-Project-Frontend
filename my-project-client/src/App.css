@@ -68,10 +68,14 @@ li:hover {
   color:white;
 }
 
-/* .flipCard {
-  
-  
-} */
+.cardFlip {
+  grid: 0cm;
+  position: absolute;
+  width: 292px;
+  height: 367px;
+  mix-blend-mode: normal;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
 .startBox {
   position: center;
@@ -123,15 +127,9 @@ font-size: 24px;
 line-height: 38px;
 }
 
-.charCard {
-  position: absolute;
-width: 292px;
-height: 367px;
+/* .charCard {
 
-background: #403B3B;
-mix-blend-mode: normal;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+} */
 
 .App-header {
   background-color: #282c34;
