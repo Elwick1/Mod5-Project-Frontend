@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  /* background: #FFFFFF */
+  background: #FFFFFF
 }
 
 .App-logo {
@@ -69,6 +69,19 @@ li:hover {
 }
 
 .charImg {
+  position: center;
+  border-radius:10px;
+  top: 5px;
+  width:150px;
+  height:190px;
+  left: 15px;
+  grid-gap: 20px;
+  padding-inline-start: 0;
+  padding: 10px;
+    display: table;
+}
+
+.pcImg {
   position: center;
   border-radius:10px;
   top: 5px;

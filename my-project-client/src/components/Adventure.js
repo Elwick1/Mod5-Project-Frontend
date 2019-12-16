@@ -1,6 +1,8 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import Dropdown from '../Navbar/Dropdown'
+import CharacterContainer from '../containers/CharacterContainer'
+
 // import '../App.css';
 
 
@@ -31,7 +33,14 @@ export default class Adventure extends React.Component {
               ) : null }
           {this.state.start === true ? (
               <div className="adventureBox">
-                
+                <h1> Who's Tale would you like to hear? </h1>
+                {this.props.characters.map(character => <CharacterContainer {...character}/>)}
+                {/* <div className="Char1"> <CharacterContainer /></div>
+                <div className="char2"> <CharacterContainer /></div>
+                <div className="char3"> <CharacterContainer /></div>
+                <div className="char4"> <CharacterContainer /></div>
+                <div className="char5"> <CharacterContainer /></div>
+                <div className="char6"> <CharacterContainer /></div> */}
               </div>
           ) : null
           }

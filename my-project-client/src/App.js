@@ -43,7 +43,7 @@ export default class App extends React.Component {
       </Route>
       <Route path="/Author" component={AboutAuthor}>
       </Route>
-      <Route path="/Adventure" component={Adventure}>
+      <Route path="/Adventure" render={(props) => <Adventure {...props} characters={this.state.characters}/>}>
       </Route>
       <Route exact path="/" component={() =>
         <header className="App-header">
