@@ -1,18 +1,59 @@
 .AdventureView
 
-.pageImage
+.pageImage{
+position: absolute;
+width: 722px;
+height: 914px;
+left: -80px;
+top: 110px;
+}
 
-.pageContent
+.pageContent {
+position: absolute;
+width: 769px;
+height: 498px;
+left: 658px;
+top: 124px;
+}
 
-.pageOptions
+.pageOption1 {
+    position: absolute;
+    width: 80px;
+    height: 428px;
+    left: 741px;
+    top: 871px;
+}
 
-.pcContainer
+.pageOption2 {
+position: absolute;
+width: 95px;
+height: 428px;
+left: 984px;
+top: 871px;
+}
+
+/* .pcContainer {
+position: absolute;
+width: 798px;
+height: 388px;
+left: 642px;
+top: 636px;
+}
 
 .pcName  
                     
 .pcJob
                     
 .playerPortrait {
-    position: relative;
-}
+position: absolute;
+border-radius:10px;
+  top: 5px;
+  width:150px;
+  height:190px;
+  left: 15px;
+  grid-gap: 20px;
+  padding-inline-start: 0;
+  padding: 10px;
+    display: table; */
+/* } */
 
