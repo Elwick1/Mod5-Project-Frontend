@@ -37,14 +37,41 @@ export default class Adventure extends React.Component {
         })
     }
 
-    switchOption = () => {
-        if(this.state.pages.length >= this.state.pageId){
-        }else {
-            this.setState({
-                currentPage: this.state.pages.find(page => page.id === this.state.pageId + 2),
-                pageId: this.state.pageId + 2
-            })
-        }
+    // switchOption = () => {
+    //     if(this.state.pages.length >= this.state.pageId){
+
+    //     }else {
+    //         this.setState({
+    //             currentPage: this.state.pages.find(page => page.id === this.state.pageId + 2),
+    //             pageId: this.state.pageId + 2
+    //         })
+    //     }
+    // }
+
+    leftClick = () => {
+        if(this.state.pageId % 2 === 0){this.setState(
+            { pageId : this.state.pageId + 2,
+            currentPage : this.state.pages.find(page => page.id === this.state.pageId + 2)}
+        )}
+        else if(this.state.pageId % 2 === 1){this.setState(
+            { pageId : this.state.pageId - 2,
+                currentPage : this.state.pages.find(page => page.id === this.state.pageId - 2)}
+            )}
+            else
+        {console.log('Nope Fix it dumbass')}
+    }
+
+    rightClick = () => {
+        if(this.state.pageId % 2 === 1){this.setState(
+            { pageId : this.state.pageId + 2,
+            currentPage : this.state.pages.find(page => page.id === this.state.pageId + 2)}
+        )}
+        else if(this.state.pageId % 2 === 0){this.setState(
+            { pageId : this.state.pageId - 2,
+                currentPage : this.state.pages.find(page => page.id === this.state.pageId - 2)}
+            )}
+            else
+        {console.log('Nope fix it dumbass')}
     }
 
     render() {
@@ -58,7 +85,11 @@ export default class Adventure extends React.Component {
                 </div>
                 ) : null }
                 {this.state.start === true ? ( 
-                    <AdventureContainer pc={this.state.selectedCharacter} page={this.state.currentPage}/>
+                    <AdventureContainer pc={this.state.selectedCharacter} 
+                    page={this.state.currentPage} 
+                    leftClick={this.leftClick} 
+                    rightClick={this.rightClick}
+                    />
                 ) : null }
           </div>
         </header>
