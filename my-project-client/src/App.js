@@ -8,12 +8,13 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import CharactersPage from './components/Characters-page';
-import StoryInfo from './components/StoryInfo';
-import AboutAuthor from './components/AboutAuthor';
-import Adventure from './components/Adventure';
+import CharactersPage from './main-page/Characters-page';
+import StoryInfo from './main-page/StoryInfo';
+import AboutAuthor from './main-page/AboutAuthor';
+import Adventure from './adventure/Adventure';
 
-const API = 'http://localhost:3000/characters/'
+const PCs = 'http://localhost:3000/player_characters'
+const Pages = 'http://localhost:3000/pages/'
 
 
 export default class App extends React.Component {
@@ -24,12 +25,19 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch(API)
+    fetch(PCs)
     .then(res => res.json())
     .then(characters => this.setState({
        characters : characters
     }))
   }
+
+  handleClick = () => {
+    this.setState({
+      showMore : !this.state.showMore
+    })
+  }
+  
 
   render () {
     return (
@@ -48,17 +56,25 @@ export default class App extends React.Component {
       <Route exact path="/" component={() =>
         <header className="App-header">
           <div className="startBox">
+            {this.state.showMore === false ? (
             <div className="creepySpeech">
             <h1> Welcome Stranger.. </h1>
             <h3> How would you like to hear a tale? </h3>
             <h4> I have many, filled with Wonder beyond your imagination.. </h4>
             <h4> Terror beyond your wildest nightmares..</h4>
+            <button onClick={this.handleClick}>Tell Me More...</button>
+            </div> ) : null }
+            {this.state.showMore === true ? ( 
+              <div className="creepySpeech">
+              <h1> Ha Ha Ha </h1>
+              <h3> They always wish to hear more... </h3>
+              <h3> Come then! </h3>
+              <h4> and i shall show you... </h4>
+              <Link key={"Adventure"} to={"/Adventure"}>
+                  <button>Tell Me More...</button>
+              </Link>
             </div>
-          <div className="begin">
-          <Link key={"Adventure"} to={"/Adventure"}>
-        <button>Tell Me More...</button>
-        </Link>
-          </div>
+              ) : null }
           </div>
         </header>}>
       </Route>
