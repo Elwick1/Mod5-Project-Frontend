@@ -34,7 +34,7 @@ export default class App extends React.Component {
 
   handleClick = () => {
     this.setState({
-      showMore : !this.state.showMore
+      showMore : true
     })
   }
   

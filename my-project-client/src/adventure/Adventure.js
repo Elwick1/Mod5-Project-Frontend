@@ -10,14 +10,14 @@ import AdventureContainer from './AdventureContainer'
 export default class Adventure extends React.Component {
 
     state = {
-        selectedCharacter : [],
+        selectedCharacter : {},
         start : false 
     }
 
     handleCharacterClick = (id) => {
         console.log(id)
         this.setState({
-            selectedCharacter : id,
+            selectedCharacter : this.props.characters.find(character => character.id === id),
             start : true
         })
     }
