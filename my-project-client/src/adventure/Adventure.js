@@ -22,11 +22,6 @@ export default class Adventure extends React.Component {
         })
     }
 
-    // handleClick = (e) => {
-    //     this.setState({
-    //         start : !this.state.start
-    //     })
-    // }
     render() {
         return(
             <header className="App-header">

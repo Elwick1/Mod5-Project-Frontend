@@ -14,7 +14,6 @@ import AboutAuthor from './main-page/AboutAuthor';
 import Adventure from './adventure/Adventure';
 
 const PCs = 'http://localhost:3000/player_characters'
-const Pages = 'http://localhost:3000/pages/'
 
 
 export default class App extends React.Component {
