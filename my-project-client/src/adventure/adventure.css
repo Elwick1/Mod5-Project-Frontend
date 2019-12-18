@@ -1,3 +1,7 @@
+html {
+  background-color: rgba(7, 7, 7, 0.5);
+}
+
 .AdventureView{
   width: 100%;
   height: 100%;
@@ -8,55 +12,77 @@ position: absolute;
 width: 722px;
 height: 914px;
 left: -80px;
-top: 110px;
+top: 80px;
 }
 
 .pageContent {
 position: absolute;
 width: 769px;
-height: 498px;
-left: 658px;
-top: 124px;
+/* height: 498px; */
+left: 558px;
+top: 84px;
+overflow: scroll;
+background-color: rgba(7, 7, 7, 0.5);
+font-size: 24px;
 }
 
 .pageOption1 {
     position: absolute;
     width: 80px;
-    height: 428px;
-    left: 741px;
-    top: 871px;
+    /* height: 128px; */
+    left: 641px;
+    top: 471px; 
 }
 
 .pageOption2 {
 position: absolute;
 width: 95px;
 height: 428px;
-left: 984px;
-top: 871px;
+left: 884px;
+top: 471px;
 }
 
-/* .pcContainer {
+.pcContainer {
 position: absolute;
-width: 798px;
-height: 388px;
+width: 208px;
+height: 288px;
 left: 642px;
-top: 636px;
+top: 582px;
+overflow: scroll;
+left: 800px;
 }
 
-.pcName  
+.pcInfo {
+  position: absolute;
+width: 208px;
+height: 288px;
+left: 642px;
+top: 582px;
+overflow: scroll;
+left: 800px;
+}
+
+.pcName  {
+  top: 0px;
+}
                     
-.pcJob
+.pcJob {
+  top: 0px;
+  
+}
                     
 .playerPortrait {
-position: absolute;
-border-radius:10px;
-  top: 5px;
-  width:150px;
-  height:190px;
+/* position: absolute; */
+/* border-radius:10px; */
+  top: 0px;
+  /* width:150px; */
+  height:290px;
   left: 15px;
   grid-gap: 20px;
-  padding-inline-start: 0;
+  image-rendering: auto;
+  object-fit: scale-down;
+  /* padding-inline-start: 0;
   padding: 10px;
     display: table; */
-/* } */
+}
 

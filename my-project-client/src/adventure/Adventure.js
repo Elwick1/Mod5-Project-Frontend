@@ -14,7 +14,7 @@ export default class Adventure extends React.Component {
         start : false,
         pages : [],
         currentPage: {},
-        pageId: 2,
+        pageId: 5,
         option: "next"
     }
 
@@ -49,12 +49,12 @@ export default class Adventure extends React.Component {
     // }
 
     leftClick = () => {
-        if(this.state.pageId % 2 === 0){this.setState(
+        if(this.state.pageId % 2 === 1){this.setState(
             { pageId : this.state.pageId + 2,
             currentPage : this.state.pages.find(page => page.id === this.state.pageId + 2)}
         )}
-        else if(this.state.pageId % 2 === 1){this.setState(
-            { pageId : this.state.pageId - 2,
+        else if(this.state.pageId % 2 === 0){this.setState(
+            { pageId : this.state.pageId + 1,
             currentPage : this.state.pages.find(page => page.id === this.state.pageId - 2)}
             )}
             else
@@ -62,11 +62,11 @@ export default class Adventure extends React.Component {
     }
 
     rightClick = () => {
-        if(this.state.pageId % 2 === 1){this.setState(
+        if(this.state.pageId % 2 === 0){this.setState(
             { pageId : this.state.pageId + 2,
             currentPage : this.state.pages.find(page => page.id === this.state.pageId + 2)}
         )}
-        else if(this.state.pageId % 2 === 0){this.setState(
+        else if(this.state.pageId % 2 === 1){this.setState(
             { pageId : this.state.pageId + 1,
                 currentPage : this.state.pages.find(page => page.id === this.state.pageId + 1)}
             )}
