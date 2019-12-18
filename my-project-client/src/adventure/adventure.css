@@ -19,11 +19,15 @@ top: 80px;
 position: absolute;
 width: 769px;
 /* height: 498px; */
-left: 558px;
-top: 84px;
+left: 562px;
+top: 80px;
 overflow: scroll;
 background-color: rgba(7, 7, 7, 0.5);
 font-size: 24px;
+}
+
+.options {
+  background-color: lawngreen;
 }
 
 .pageOption1 {
@@ -56,7 +60,7 @@ left: 800px;
   position: absolute;
 width: 208px;
 height: 288px;
-left: 642px;
+left: 542px;
 top: 582px;
 overflow: scroll;
 left: 800px;

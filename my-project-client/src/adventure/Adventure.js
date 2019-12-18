@@ -54,8 +54,8 @@ export default class Adventure extends React.Component {
             currentPage : this.state.pages.find(page => page.id === this.state.pageId + 2)}
         )}
         else if(this.state.pageId % 2 === 0){this.setState(
-            { pageId : this.state.pageId + 1,
-            currentPage : this.state.pages.find(page => page.id === this.state.pageId - 2)}
+            { pageId : this.state.pageId + 2,
+            currentPage : this.state.pages.find(page => page.id === this.state.pageId + 2)}
             )}
             else
         {console.log('Nope Fix it dumbass')}
@@ -63,8 +63,8 @@ export default class Adventure extends React.Component {
 
     rightClick = () => {
         if(this.state.pageId % 2 === 0){this.setState(
-            { pageId : this.state.pageId + 2,
-            currentPage : this.state.pages.find(page => page.id === this.state.pageId + 2)}
+            { pageId : this.state.pageId - 2,
+            currentPage : this.state.pages.find(page => page.id === this.state.pageId - 2)}
         )}
         else if(this.state.pageId % 2 === 1){this.setState(
             { pageId : this.state.pageId + 1,
@@ -72,6 +72,10 @@ export default class Adventure extends React.Component {
             )}
             else
         {console.log('Nope fix it dumbass')}
+    }
+
+    rollD20 = () => {
+        Math.floor(Math.random()*21)
     }
 
     render() {
