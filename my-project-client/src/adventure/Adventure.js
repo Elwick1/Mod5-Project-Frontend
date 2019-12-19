@@ -14,7 +14,7 @@ export default class Adventure extends React.Component {
         start : false,
         pages : [],
         currentPage: {},
-        pageId: 5,
+        pageId: 0,
         option: "next"
     }
 
@@ -31,9 +31,9 @@ export default class Adventure extends React.Component {
         console.log(id)
         this.setState({
             selectedCharacter : this.props.characters.find(character => character.id === id),
+            pageId: this.props.characters.find(character => character.id === id).start_Page,
             start : true,
-            currentPage : this.state.pages.find(page => page.id === this.state.pageId)
-
+            currentPage : this.state.pages.find(page => page.id === this.props.characters.find(character => character.id === id).start_Page)
         })
     }
 
@@ -67,8 +67,8 @@ export default class Adventure extends React.Component {
             currentPage : this.state.pages.find(page => page.id === this.state.pageId - 2)}
         )}
         else if(this.state.pageId % 2 === 1){this.setState(
-            { pageId : this.state.pageId + 1,
-                currentPage : this.state.pages.find(page => page.id === this.state.pageId + 1)}
+            { pageId : this.state.pageId - 2,
+                currentPage : this.state.pages.find(page => page.id === this.state.pageId - 2)}
             )}
             else
         {console.log('Nope fix it dumbass')}
