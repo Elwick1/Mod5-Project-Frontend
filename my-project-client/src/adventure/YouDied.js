@@ -8,9 +8,10 @@ export default class YouDied extends React.Component {
         return(
             <>
             <div className="youDied">
-                <h1 className="DeathMessage"> 
-                    You Have Died...
-                </h1>
+                <img className="DeathMessage"
+                src="../../public/you_died.png"
+                > 
+                </img>
             <Link key={"home"} to={"/"}>
              <button className="restart"> Hear Another Story </button>
             </Link>

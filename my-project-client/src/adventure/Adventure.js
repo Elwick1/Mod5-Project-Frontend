@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar';
 import Dropdown from '../Navbar/Dropdown'
 import CharacterSelect from './CharacterSelect'
 import AdventureContainer from './AdventureContainer'
+// import './adventure.css'
 
 const Pages = 'http://localhost:3000/pages/'
 

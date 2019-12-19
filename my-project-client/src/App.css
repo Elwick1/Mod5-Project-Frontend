@@ -1,8 +1,8 @@
 .App, html, body {
   text-align: center;
   background: #FFFFFF;
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .App-logo {
@@ -146,9 +146,9 @@ background: rgba(7, 7, 7, 0.5);
 .adventureBox {
   position: absolute;
   padding-bottom: initial;
-  width: 1200px;
+  width: 100%;
   height: 80vh;
-  left: 40px;
+  left: 0px;
   top: 110px;
   background: rgba(7, 7, 7, 0.5);
   overflow: scroll;
