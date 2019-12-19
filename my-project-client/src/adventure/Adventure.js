@@ -15,7 +15,7 @@ export default class Adventure extends React.Component {
         pages : [],
         currentPage: {},
         pageId: 0,
-        option: "next"
+        isDead : false
     }
 
     componentDidMount() {
@@ -36,7 +36,6 @@ export default class Adventure extends React.Component {
             currentPage : this.state.pages.find(page => page.id === this.props.characters.find(character => character.id === id).start_Page)
         })
     }
-
     // switchOption = () => {
     //     if(this.state.pages.length >= this.state.pageId){
 
@@ -47,7 +46,6 @@ export default class Adventure extends React.Component {
     //         })
     //     }
     // }
-
     leftClick = () => {
         if(this.state.pageId % 2 === 1){this.setState(
             { pageId : this.state.pageId + 2,
@@ -75,7 +73,11 @@ export default class Adventure extends React.Component {
     }
 
     rollD20 = () => {
-        Math.floor(Math.random()*21)
+       const result = Math.floor((Math.random()*21) +5)
+        if ( result > this.state.currentPage.monster_health){this.leftClick()}
+        else {this.setState({
+            isDead : true
+        })}
     }
 
     render() {
@@ -93,6 +95,8 @@ export default class Adventure extends React.Component {
                     page={this.state.currentPage} 
                     leftClick={this.leftClick} 
                     rightClick={this.rightClick}
+                    roll={this.rollD20}
+                    isDead={this.state.isDead}
                     />
                 ) : null }
           </div>

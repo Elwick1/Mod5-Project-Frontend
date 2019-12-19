@@ -30,6 +30,23 @@ font-size: 24px;
   background-color: lawngreen;
 }
 
+.FIGHT {
+  position: absolute;
+    width: 80px;
+    /* height: 128px; */
+    left: 641px;
+    top: 471px; 
+}
+
+.youDied {
+  position: center;
+}
+
+.DeathMessage {
+  position: center;
+  
+}
+
 .pageOption1 {
     position: absolute;
     width: 80px;
