@@ -3,7 +3,7 @@ import Navbar from '../Navbar/Navbar';
 import Dropdown from '../Navbar/Dropdown'
 import CharacterSelect from './CharacterSelect'
 import AdventureContainer from './AdventureContainer'
-// import './adventure.css'
+import './adventure.css'
 
 const Pages = 'http://localhost:3000/pages/'
 
@@ -37,16 +37,7 @@ export default class Adventure extends React.Component {
             currentPage : this.state.pages.find(page => page.id === this.props.characters.find(character => character.id === id).start_Page)
         })
     }
-    // switchOption = () => {
-    //     if(this.state.pages.length >= this.state.pageId){
-
-    //     }else {
-    //         this.setState({
-    //             currentPage: this.state.pages.find(page => page.id === this.state.pageId + 2),
-    //             pageId: this.state.pageId + 2
-    //         })
-    //     }
-    // }
+    
     leftClick = () => {
         if(this.state.pageId % 2 === 1){this.setState(
             { pageId : this.state.pageId + 2,
@@ -73,7 +64,7 @@ export default class Adventure extends React.Component {
         {console.log('Nope fix it dumbass')}
     }
 
-    rollD20 = () => {
+    rollFightD20 = () => {
        const result = Math.floor((Math.random()*21) +5)
         if ( result > this.state.currentPage.monster_health){this.leftClick()}
         else {this.setState({
@@ -81,26 +72,36 @@ export default class Adventure extends React.Component {
         })}
     }
 
+    // avoidtrapD20 = () => {
+    //     const result = Math.floor((Math.random()*21) +5)
+    //     if ( result > this.state.currentPage.trapSave){this.leftClick()}
+    //     else {this.setState({
+    //         isDead : true 
+    //     })}
+    // }
+
     render() {
         return(
-            <header className="App-header">
-          <div className="begin">
+            <header className="Adventure">
+              {this.state.start === false ? (
+                <div className="who">
+                  <h1 className="pctitle"> Who's Tale would you like to hear? </h1>
+                </div>
+              ) : null }
               {this.state.start === false ? ( 
                 <div className="adventureBox">
-                 <h1> Who's Tale would you like to hear? </h1>
                 {this.props.characters.map(character => <CharacterSelect handleClick={this.handleCharacterClick} {...character}/>)}
-                </div>
+                </div> 
                 ) : null }
                 {this.state.start === true ? ( 
                     <AdventureContainer pc={this.state.selectedCharacter} 
                     page={this.state.currentPage} 
                     leftClick={this.leftClick} 
                     rightClick={this.rightClick}
-                    roll={this.rollD20}
+                    roll={this.rollFightD20}
                     isDead={this.state.isDead}
                     />
                 ) : null }
-          </div>
         </header>
         )
     }

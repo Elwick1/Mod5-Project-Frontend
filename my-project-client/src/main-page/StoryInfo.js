@@ -5,14 +5,12 @@ import Dropdown from '../Navbar/Dropdown'
 export default class StoryInfo extends React.Component {
 render() {
     return ( 
-        <div><header className="App-header">
       <div className="storyBox">
       <h1> Story Info </h1>
         <p>
           story info will go here 
         </p>
       </div>
-     </header></div>
     )
 }
 

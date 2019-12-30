@@ -5,19 +5,19 @@ import YouDied from './YouDied'
 export default class AdventureCon extends React.Component {
 
      render () {
-        return (
+        return ( 
                 <>
                 {this.props.isDead === false ? 
             <div className="AdventureView">
-                <div className="pageImage"><img src={this.props.page.image_url}></img></div>
-                <div className="pageContent"><h2>{this.props.page.content}</h2></div>
+                <div className="pageImage"><img className="Image" src={this.props.page.image_url}></img></div>
+                <div className="storyContent">
+                <div className="pageContent"><h2 className="content">{this.props.page.content}</h2></div>
+                </div>
                 <div className="options">
-                
                 {this.props.page.monster === true ? 
                 <div className="FIGHT">
                     <button onClick={() => this.props.roll()}> Fight For Your Life </button>
                 </div> 
-                
                 :
                 <div className="pageOption1">
                     <button onClick={() => this.props.leftClick()}>{this.props.page.first_option}</button>
@@ -30,7 +30,13 @@ export default class AdventureCon extends React.Component {
                 }
                 </div>
                 <div className="pcInfo">
+                <br></br>
+                <br></br>
+
                     <p className="pcName">{this.props.pc.name}</p>  
+                    <br></br>
+                    <br></br>
+
                     <p className="pcJob">{this.props.pc.job}</p>
                 </div>
                 <div className="pcContainer"> 

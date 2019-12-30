@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from '../Navbar/Navbar'
-import Dropdown from '../Navbar/Dropdown'
 import Bio from './Bio'
+import '../App.css'
+
 
 export default class AboutAuthor extends React.Component {
 
@@ -17,9 +17,7 @@ export default class AboutAuthor extends React.Component {
 
 
     render() {
-        return(
-        <div>
-            <header className="App-header">
+        return(            
             <div className="authBox">
             <h1> About The Author </h1>
             <div className="authName">
@@ -34,9 +32,7 @@ export default class AboutAuthor extends React.Component {
             </div>
             </div>
             </div>
-            </header>
-        </div> 
-        )
+                   )
     }
 }
                                         
