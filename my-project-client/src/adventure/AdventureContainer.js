@@ -45,6 +45,7 @@ export default class AdventureCon extends React.Component {
                 </div>
                 :
                 <YouDied />
+                // death={this.props.deathPage}
                 }
                 </>
         )

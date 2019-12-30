@@ -63,12 +63,19 @@ export default class Adventure extends React.Component {
             else
         {console.log('Nope fix it dumbass')}
     }
+    // rightClick = () => {
+    //     if(this.state.page.canDie === true){this.setState(
+    //         {isDead : true,
+                // deathPage : this.state.pages.find(page => page.deathId === this.state.pageId).
+    //     })
+    // }   
 
     rollFightD20 = () => {
        const result = Math.floor((Math.random()*21) +5)
         if ( result > this.state.currentPage.monster_health){this.leftClick()}
         else {this.setState({
             isDead : true
+            // deathPage : this.state.pages.find(page => page.deathId === this.state.pageId).
         })}
     }
 
@@ -77,6 +84,7 @@ export default class Adventure extends React.Component {
     //     if ( result > this.state.currentPage.trapSave){this.leftClick()}
     //     else {this.setState({
     //         isDead : true 
+    //          deathPage : this.state.pages.find(page => page.deathId === this.state.pageId).
     //     })}
     // }
 
@@ -100,6 +108,7 @@ export default class Adventure extends React.Component {
                     rightClick={this.rightClick}
                     roll={this.rollFightD20}
                     isDead={this.state.isDead}
+                    // deathPage={this.state.deathPage}
                     />
                 ) : null }
         </header>
