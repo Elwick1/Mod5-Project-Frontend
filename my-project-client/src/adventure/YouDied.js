@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../Navbar/Navbar'
 import {Link} from 'react-router-dom'
 import './adventure.css'
 
@@ -8,10 +7,8 @@ export default class YouDied extends React.Component {
         return(
             <>
             <div className="youDied">
-                <img className="DeathMessage"
-                src="../../public/you_died.png"
-                > 
-                </img>
+                <img className="DeathMessage"src={this.props.death.death_image}></img>
+                <h3>{this.props.death.death_message}</h3>
             <Link key={"home"} to={"/"}>
              <button className="restart"> Hear Another Story </button>
             </Link>

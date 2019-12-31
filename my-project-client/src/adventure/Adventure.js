@@ -1,6 +1,4 @@
 import React from 'react';
-import Navbar from '../Navbar/Navbar';
-import Dropdown from '../Navbar/Dropdown'
 import CharacterSelect from './CharacterSelect'
 import AdventureContainer from './AdventureContainer'
 import './adventure.css'
@@ -47,46 +45,38 @@ export default class Adventure extends React.Component {
             { pageId : this.state.pageId + 2,
             currentPage : this.state.pages.find(page => page.id === this.state.pageId + 2)}
             )}
-            else
-        {console.log('Nope Fix it dumbass')}
     }
-
+ // rightClick = () => {
+    //     if(this.state.pageId % 2 === 0){this.setState(
+    //         { pageId : this.state.pageId - 2,
+    //         currentPage : this.state.pages.find(page => page.id === this.state.pageId - 2)}
+    //     )}
+    //     else if(this.state.pageId % 2 === 1){this.setState(
+    //         { pageId : this.state.pageId - 2,
+    //             currentPage : this.state.pages.find(page => page.id === this.state.pageId - 2)}
+    //         )}
+    // }
     rightClick = () => {
-        if(this.state.pageId % 2 === 0){this.setState(
-            { pageId : this.state.pageId - 2,
-            currentPage : this.state.pages.find(page => page.id === this.state.pageId - 2)}
-        )}
-        else if(this.state.pageId % 2 === 1){this.setState(
-            { pageId : this.state.pageId - 2,
-                currentPage : this.state.pages.find(page => page.id === this.state.pageId - 2)}
-            )}
-            else
-        {console.log('Nope fix it dumbass')}
+        this.setState({
+            isDead : true 
+        })  
     }
-    // rightClick = () => {
-    //     if(this.state.page.canDie === true){this.setState(
-    //         {isDead : true,
-                // deathPage : this.state.pages.find(page => page.deathId === this.state.pageId).
-    //     })
-    // }   
 
     rollFightD20 = () => {
        const result = Math.floor((Math.random()*21) +5)
         if ( result > this.state.currentPage.monster_health){this.leftClick()}
         else {this.setState({
             isDead : true
-            // deathPage : this.state.pages.find(page => page.deathId === this.state.pageId).
         })}
     }
 
-    // avoidtrapD20 = () => {
-    //     const result = Math.floor((Math.random()*21) +5)
-    //     if ( result > this.state.currentPage.trapSave){this.leftClick()}
-    //     else {this.setState({
-    //         isDead : true 
-    //          deathPage : this.state.pages.find(page => page.deathId === this.state.pageId).
-    //     })}
-    // }
+    avoidtrapD20 = () => {
+        const result = Math.floor((Math.random()*21) +5)
+        if ( result > this.state.currentPage.trapSave){this.leftClick()}
+        else {this.setState({
+            isDead : true }
+        )}
+    }
 
     render() {
         return(
@@ -108,7 +98,7 @@ export default class Adventure extends React.Component {
                     rightClick={this.rightClick}
                     roll={this.rollFightD20}
                     isDead={this.state.isDead}
-                    // deathPage={this.state.deathPage}
+                    trap={this.avoidtrapD20}
                     />
                 ) : null }
         </header>

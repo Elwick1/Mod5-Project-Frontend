@@ -23,10 +23,11 @@ export default class AdventureCon extends React.Component {
                     <button onClick={() => this.props.leftClick()}>{this.props.page.first_option}</button>
                 </div>
                 }
-                { this.props.page.path_id <= 2 ? "" : 
+                { this.props.page.can_die === true ? 
                 <div className="pageOption2">
                     <button onClick={() => this.props.rightClick()}>{this.props.page.second_option}</button>
                 </div>
+                : null 
                 }
                 </div>
                 <div className="pcInfo">
@@ -44,7 +45,7 @@ export default class AdventureCon extends React.Component {
                 </div>
                 </div>
                 :
-                <YouDied />
+                <YouDied death={this.props.page}/>
                 // death={this.props.deathPage}
                 }
                 </>
