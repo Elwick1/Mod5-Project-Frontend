@@ -7,7 +7,7 @@ background-color: #282c34;
   grid-template-rows: 1fr 1fr 1fr; */
 }
 
-.adventureBox {
+.characterSelect {
   background: rgba(7, 7, 7, 0.5);
   overflow: scroll;  
   display: grid;
@@ -17,7 +17,6 @@ background-color: #282c34;
   column-gap: 80px;
   padding: 20px;
 }
-
 .selectButton{
 justify-self: center;
 }
@@ -137,6 +136,35 @@ width: 100%;
 }
 
 
-                    
+.youDied{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr;
+}                    
+
+.Deathimage{
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding: 10px;
+}
+
+.deathMessage{
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  overflow: scroll;
+  padding: 15px;
+}
+.restart{
+  justify-self: center;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding-bottom: 20px;
+}
 
 

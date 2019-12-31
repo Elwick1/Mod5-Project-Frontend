@@ -87,7 +87,7 @@ export default class Adventure extends React.Component {
                 </div>
               ) : null }
               {this.state.start === false ? ( 
-                <div className="adventureBox">
+                <div className="characterSelect">
                 {this.props.characters.map(character => <CharacterSelect handleClick={this.handleCharacterClick} {...character}/>)}
                 </div> 
                 ) : null }
