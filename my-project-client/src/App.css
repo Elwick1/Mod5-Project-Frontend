@@ -4,21 +4,12 @@
   height: 100% !important;
 }
 
-/* .App {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-
-} */
-
 .navB {
 width: 100%;
 height: 60px;
 background-color: black;
 grid-column-start: 1;
 grid-column-end: 4;
-/* grid-column: 1/4;
-grid-row: 1/1; */
 }
 
 .dropdown {
@@ -77,12 +68,8 @@ justify-self: center;
 }
 
 .creepySpeech {
-padding: 30px;}
-
-/* .Adventure {
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-} */
+padding: 30px;
+}
 
 .characterCards {
 display: grid;
@@ -93,10 +80,6 @@ display: grid;
   grid-row-start: 2;
   grid-row-end: 2;
   
-}
-
-.pcInfo {
-  position: center;
 }
 
 .cardFlip{
@@ -116,7 +99,6 @@ grid-template-rows: 1fr 1fr 1fr;
   }
 
 .pcImg {
-  /* justify-self: center; */
   width:100%;
   height:50%;
 }
@@ -133,7 +115,6 @@ grid-template-rows: 1fr 1fr 1fr;
   height:100vh;
 }
 
-
 .who {
 justify-self: center !important;
 }
@@ -141,155 +122,3 @@ justify-self: center !important;
 .pctitle {
   justify-self: center !important;
 }
-
-/* .App, html, body {
-  text-align: center;
-  background: #FFFFFF;
-  width: 100% !important;
-  height: 100% !important;
-    display: grid;
-  grid-template-columns: 1fr 1fr;
-grid-template-rows: 300px 300px ;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-
-
-background: #070707;
-}
-
-
-
-
-
-
-.pcImg {
-  position: center;
-  border-radius:10px;
-  top: 5px;
-  width:150px;
-  height:190px;
-  left: 15px;
-  grid-gap: 20px;
-  padding-inline-start: 0;
-  padding: 10px;
-    display: table;
-}
-
-.startBox {
-  position: center;
-width: 770px;
-height: 394px;
-left: 335px;
-top: 253px;
-background: rgba(7, 7, 7, 0.5);
-}
-
-.authBox {
-  position: center;
-width: 770px;
-height: 500px;
-left: 335px;
-top: 253px;
-background: rgba(7, 7, 7, 0.5);
-}
-
-.storyBox {
-  position: center;
-  width: 770px;
-  height: 500px;
-  left: 335px;
-  top: 253px;
-  background: rgba(7, 7, 7, 0.5);
-}
-
-.begin {
-  font-family: Sofia;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 38px;
-  height:100vh;
-  color: rgb(250, 2, 2);
-}
-
-.creepySpeech {
-  font-family: Sofia;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 38px;
-  
-  color: rgb(250, 2, 2);
-}
-
-
-
-.message {
-  font-family: Sofia;
-font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 38px;
-
-color: #FFFCFC;
-}
-
-.characterCards {
-  background-color: #282c34;
-  font-family: Sofia;
-font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 38px;
-}
-
-.cardFlip {
-  grid-template-columns: repeat(auto-fill, 250px);
-  grid-gap: 20px;
-  padding-inline-start: 0;
-  float: left;
-    width: 50%;
-    padding: 10px;
-    display: table;
-    clear: both;
-    list-style: none;
-    padding: 20px;
-    display: grid;
-    overflow: scroll;
-    height: 80vh;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

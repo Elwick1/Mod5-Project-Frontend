@@ -2,9 +2,6 @@
 background-color: #282c34;
   width: 100% !important;
   height: 100% !important;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr; */
 }
 
 .characterSelect {
@@ -21,13 +18,13 @@ background-color: #282c34;
 justify-self: center;
 }
 
-
 .AdventureView{
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr ;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 1fr ;
+  column-gap: 50px;
 }
 
 .pageImage{
@@ -35,32 +32,36 @@ justify-self: center;
 width: 100%;
 height: 100%;
 grid-row-start: 1;
-grid-row-end: 3;
+grid-row-end: 2;
 grid-column-start: 1;
 grid-column-end: 1;
 }
 .Image {
-  /* width: 100%; */
+  width: 100%;
   grid-row-start: 1;
-grid-row-end: 3;
+grid-row-end: 2;
 grid-column-start: 1;
 grid-column-end: 1;
 }
 
 .storyContent {
-  grid-row-start: 1;
-grid-row-end: 2;
-grid-column-start: 2;
-grid-column-end: 4;
-padding: 50px;
+ display: grid;
+ grid-template-rows: 1fr 1fr;
+ row-gap: 15px;
+ padding: 25px;
+
 }
 .pageContent {
 grid-row-start: 1;
 grid-row-end: 2;
-grid-column-start: 2;
-grid-column-end: 4;
-overflow: scroll;
-background: rgb(245, 218, 143);
+background: #282c34;
+/* border-color: black; */
+overflow: scroll !important;
+height: 450px;
+/* width: 769px;
+height: 498px;
+left: 658px;
+top: 124px; */
 }
 .content{
   grid-row-start: 1;
@@ -68,73 +69,89 @@ grid-row-end: 2;
 grid-column-start: 2;
 grid-column-end: 4;
   justify-self: center;
-  padding: 20px;
-  position: center;
-  font-family: Sofia;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 38px;
+  font-family: fantasy;
+  font-style: oblique;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 40px;
   overflow: scroll !important;
 }
 
-.FIGHT {
+.pcContainer {
   grid-row-start: 2;
   grid-row-end: 3;
-  grid-column-start: 3;
-  grid-column-end: 4;
 }
-.options {
-  grid-row-start: 2;
-grid-row-end: 3;
-grid-column-start: 2;
-grid-column-end: 3;
+.pcInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* column-gap: 50px; */
+}
+.playerPortrait {
+  grid-column-start: 2;
+  grid-column-end: 3;
+width: 100%;
+}
+.pageOption1 {
+grid-column-start: 1;
+grid-column-end: 2;
+grid-row-start: 1;
+grid-row-end: 2;
 justify-self: center;
 padding: 20px;
 }
-.pageOption1 {
-/* height: 500px; */
+.opt1 {
+  background-color: #282c34; 
+  border-color: black;
+  border: double;
+  display: inline-block;
+    color: white;
+  cursor: pointer;
+  margin: 4px 2px;
+  text-align: center;
+  height: 100px;
+  font-size: 20px;
+  font-family: fantasy;
+  font-style: oblique;
+  font-weight: bold;
+}
+.opt2{
+  background-color: #282c34; 
+  border: none;
+  border-color: black;
+  border: double;
+  color: white;
+  cursor: pointer;
+  margin: 4px 2px;
+  text-align: center;
+  height: 100px;
+  font-size: 20px;
+  font-family: fantasy;
+  font-style: oblique;
+  font-weight: bold;
+}
+.FIGHT {
+  grid-column-start: 1;
+grid-column-end: 2;
+grid-row-start: 1;
+grid-row-end: 2;
 justify-self: center;
+padding: 60px;
+left: 50px;
 }
-.pageOption2 {
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 2;
-  grid-column-end: 3;
+.fight{
+  background-color: #282c34; 
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 4px 2px;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  font-family: fantasy;
+  /* font-style: oblique; */
+  font-weight: bold;
+  font-size: 20px;
 }
-.pcContainer {
-grid-row-start: 2;
-grid-row-end: 3;
-grid-column-start: 3;
-grid-column-end: 4;
-overflow: scroll;
-}
-.playerPortrait {
-width: 100%;
-}
-.pcName  {
-  font-family: Sofia;
-  font-style: bold;
-  font-size: 38px;
-}
-                    
-.pcJob {
-  font-family: Sofia;
-  font-style: bold;
-  font-size: 38px;
-
-}
-.pcInfo {
-  justify-self: center;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  font-family: Sofia;
-  font-style: bold;
-  font-weight: normal;
-}
-
 
 .youDied{
   display: grid;
@@ -157,6 +174,11 @@ width: 100%;
   grid-column-end: 3;
   overflow: scroll;
   padding: 15px;
+  font-size: 22px;
+  font-family: fantasy;
+  font-style: oblique;
+  font-weight: bold;
+  justify-content: center;
 }
 .restart{
   justify-self: center;
@@ -165,6 +187,31 @@ width: 100%;
   grid-column-start: 2;
   grid-column-end: 3;
   padding-bottom: 20px;
+  background-color: #282c34; 
+  border-color: #282c34;
+  color: white;
+  cursor: pointer;
+  margin: 4px 2px;
+  text-align: center;
+  height: 100px;
+  font-size: 20px;
+  font-family: fantasy;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+.launchB{
+  background-color: rgba(7, 7, 7, 0.5); 
+border: none;
+  color: white;
+  cursor: pointer;
+  margin: 0px ;
+  text-align: center;
+  padding: 16px 32px;
+  height: 50px;
+  font-family: fantasy;
+  font-style: oblique;
+  font-weight: bold;
 }
 
 

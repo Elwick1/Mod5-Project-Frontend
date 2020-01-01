@@ -8,11 +8,13 @@ export default class YouDied extends React.Component {
             <>
             <div className="youDied">
                 <img className="Deathimage"src={this.props.death.death_image}></img>
+                {/* <div className="deathInfo"> */}
                 <h3 className="deathMessage">{this.props.death.death_message}</h3>
             <Link className="restart" key={"home"} to={"/"}>
              <button className="restart"> Hear Another Story </button>
             </Link>
             </div>
+            {/* </div> */}
             </>
         )
     }

@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import '../App.css'
+import './adventure.css'
 
 export default class CharacterSelect extends React.Component{
 
