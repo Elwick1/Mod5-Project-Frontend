@@ -29,7 +29,7 @@ export default class Dropdown extends React.Component {
   render() {
     return (
       <div className="dropdown" >
-        <div className="button" onClick={this.showDropdownMenu}> Options </div>
+        <div className="button" onClick={this.showDropdownMenu}> ||| </div>
 
 { this.state.displayMenu ? (
 <ul>

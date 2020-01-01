@@ -57,26 +57,22 @@ export default class App extends React.Component {
           <div className="startBox">
             {this.state.showMore === false ? (
             <div className="creepySpeech">
-            <h1> Welcome Stranger.. </h1>
-            <h3> How would you like to hear a tale? </h3>
-            <h4> I have many, filled with Wonder beyond your imagination.. </h4>
-            <h4> Terror beyond your wildest nightmares..</h4>
-            <button onClick={this.handleClick}>Tell Me More...</button>
+            <h3 className="part1"> How would you like to hear a tale? </h3>
+            <button className="button1" onClick={this.handleClick}>Thats... Why i'm here.</button>
+            <img src='../public/bkg.jpg'></img>
             </div> ) : null }
             {this.state.showMore === true ? ( 
               <div className="creepySpeech">
-              <h1> Ha Ha Ha </h1>
-              <h3> They always wish to hear more... </h3>
-              <h3> Come then! </h3>
-              <h4> and i shall show you... </h4>
+              <h4 className="part2"> I have many, filled with Wonder beyond your imagination, Terror beyond your wildest nightmares...</h4>
+              <h4 className="part3"> Prepare to open up your mind and join us on a journey through time and space</h4>
               <Link key={"Adventure"} to={"/Adventure"}>
-                  <button>Tell Me More...</button>
+                  <button className="button2">Let the adventure begin</button>
               </Link>
             </div>
               ) : null }
           </div>
         </header>}>
-      </Route>
+      </Route> 
       </Switch>
       </div>
     </div>
