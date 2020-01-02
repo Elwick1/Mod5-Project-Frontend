@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
-import CharacterCard from '../components/CharacterCard'
+import CharacterCard from '../containers/CharacterCard'
 
 
 
@@ -8,16 +8,9 @@ export default class CharactersPage extends React.Component {
     
 render() {
     return(
-        <div><header className="App-header">
       <div className="characterCards">
-<div> 
-{this.props.characters.map(character => <CharacterCard {...character}/>)}
-</div>
-
-
-      
+    {this.props.characters.map(character => <CharacterCard {...character}/>)}
       </div>
-     </header></div>
     )
 }
 

@@ -8,7 +8,6 @@ export default class Navbar extends React.Component {
         return (
           <div className="navB">
               <Dropdown />
-              <h1 className="message"> HELLO MICHAEL THIS IS YOUR NAVBAR!!!</h1>
           </div>
         );
       }

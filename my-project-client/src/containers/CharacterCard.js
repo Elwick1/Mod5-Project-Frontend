@@ -6,7 +6,6 @@ import '../App.css'
 export default class CharacterCard extends React.Component{
 render() {
     return ( 
-        <div className="cardFlip">
 <Flippy 
     flipOnHover={false} 
     flipOnClick={true} 
@@ -16,7 +15,7 @@ render() {
 >
 <FrontSide style={{backgroundColor: '#403B3B',}}>
     <div>
-<img className="charImg" src={this.props.image}></img>
+<img className="charImg" src={this.props.image_url}></img>
     </div>
 </FrontSide>
 <BackSide
@@ -27,10 +26,9 @@ style={{ backgroundColor: '#403B3B'}}>
 {this.props.race}
 <br>
 </br>
-Class : {this.props.class}
+Class : {this.props.job}
 </BackSide>
 </Flippy>
-</div>
 )
 }
 }
