@@ -223,6 +223,9 @@ border: none;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
+    font-family: fantasy;
+  font-style: oblique;
+  font-weight: bold;
   }
 
 
