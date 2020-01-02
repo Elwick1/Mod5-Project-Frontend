@@ -59,6 +59,7 @@ li:hover {
   display: grid;
   /* grid-template-columns: 1fr 1fr 1fr; */
   grid-template-rows: 1fr 1fr;
+  background: image('bkg.jpg');
 }
 
 .startBox {
@@ -144,13 +145,15 @@ display: grid;
 
 .cardFlip{
   display: grid;
-  
+  cursor: pointer;
 }
 
 .flippy-back {
 display: grid;
 grid-template-rows: 1fr 1fr 1fr;
-}
+overflow: scroll;
+
+} 
 
 .charImg {
     width:200px;
@@ -165,20 +168,76 @@ grid-template-rows: 1fr 1fr 1fr;
 
 .charInfo {
   justify-self: center !important;
+  overflow: scroll;
   padding: 20px;
   position: center;
-  font-family: Sofia;
+  font-family: fantasy;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 36px;
   line-height: 38px;
   height:100vh;
 }
 
-.who {
-justify-self: center !important;
+.storyBox{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.Stitle {
+grid-column-start: 2;
+justify-self: center;
+height: 100px;
+font-family: fantasy;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+}
+.abS{
+  grid-column-start: 1;
+grid-column-end: 4;
+grid-row-start: 2;
+grid-row-end: 3;
+height: 100px;
+padding: 25px;
+}
+.aboutStory {
+  background-color: black;
+  border: double;
+padding: 25px;
+color: white;
+justify-self: center;
+font-family: fantasy;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  /* line-height: 38px; */
 }
 
-.pctitle {
-  justify-self: center !important;
+.authBox{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.title{
+  grid-column-start: 2;
+  grid-row-start: 1;
+  justify-self: center;
+}
+.authName{
+  grid-column-start: 2;
+  grid-row-start: 2;
+  justify-self: center;
+}
+.showBio{
+  grid-column-start: 2;
+  grid-row-start: 2;
+  justify-self: center;
+  position: center;
+}
+
+.BKG{
+  width: 100%;
+  height: 100%;
+  background-position: center;
 }

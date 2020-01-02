@@ -26,12 +26,10 @@ render() {
 <BackSide
 style={{ backgroundColor: '#282c34'}}>
     <div className="charInfo">
+{this.props.description}
+{/* Race : {this.props.race}
 <br></br>
-Name : {this.props.name}
-<br></br>
-Race : {this.props.race}
-<br></br>
-Class : {this.props.job}
+Class : {this.props.job} */}
     </div>
 </BackSide>
 </Flippy>

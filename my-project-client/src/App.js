@@ -12,6 +12,7 @@ import CharactersPage from './main-page/Characters-page';
 import StoryInfo from './main-page/StoryInfo';
 import AboutAuthor from './main-page/AboutAuthor';
 import Adventure from './adventure/Adventure';
+import BKG from './bkg.jpg'
 
 const PCs = 'http://localhost:3000/player_characters'
 
@@ -54,12 +55,12 @@ export default class App extends React.Component {
       </Route>
       <Route exact path="/" component={() =>
         <header className="App-header">
-          <div className="startBox">
+        {/* <img className="BKG" src={BKG}></img> */}
+           <div className="startBox">
             {this.state.showMore === false ? (
             <div className="creepySpeech">
             <h3 className="part1"> How would you like to hear a tale? </h3>
             <button className="button1" onClick={this.handleClick}>Thats... Why i'm here.</button>
-            <img src='../public/bkg.jpg'></img>
             </div> ) : null }
             {this.state.showMore === true ? ( 
               <div className="creepySpeech">

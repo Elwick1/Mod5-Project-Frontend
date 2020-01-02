@@ -38,11 +38,11 @@ export default class Dropdown extends React.Component {
     <button className="b1"> Story Info </button>
   </Link>
 </li>
-<li>
+{/* <li>
   <Link key={"AboutAuthor"} to={"/Author"}>
     <button className="b3"> About the Author </button>
   </Link>
-</li>
+</li> */}
 <li>
   <Link key={"home"} to={"/"}>
     <button className="b4"> Home </button>

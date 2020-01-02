@@ -82,8 +82,8 @@ export default class Adventure extends React.Component {
         return(
             <header className="Adventure">
               {this.state.start === false ? (
-                <div className="who">
-                  <h1 className="pctitle"> Who's Tale would you like to hear? </h1>
+                <div className="who"> 
+                  <h1 className="pctitle"> Choose Your Protaganist </h1>
                 </div>
               ) : null }
               {this.state.start === false ? ( 
