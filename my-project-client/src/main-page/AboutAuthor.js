@@ -25,7 +25,8 @@ export default class AboutAuthor extends React.Component {
             <button className="showBio" onClick={this.handleClick}> Show More </button>
                 {this.state.showBio === true ? 
                 <h1 className="AboutMe">
-                Born in Leicester, in 1992. I Quickly grew to love Fantasy and Video games,  
+                Born in Leicester, in 1992. I Quickly grew to love Fantasy and Video games, the way that they created these 
+                immense worlds and hooked you inot the story was incredible 
                 
             </h1>
              : null } 
